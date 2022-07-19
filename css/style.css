@@ -1,0 +1,785 @@
+@charset "utf-8";
+
+
+/*共通パーツ*/
+.wrap {
+    width: 100%;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section_ttl {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 4em;
+}
+
+
+
+
+
+
+/* -----------------------------------ヘッダ-------------------------------- */
+
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: #fff;
+
+}
+.header_box{
+    display: flex;
+    margin-top: 4em;
+    margin-bottom: 6em;
+    padding-bottom: 1em;
+    border-bottom: solid 1px rgb(196, 194, 194);
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*------------------- ヘッダーロゴ ------------------*/
+
+/*------------------- グローバルナビ ----------------*/
+
+.gNav {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.gNav_list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gNav_item {
+    display: block;
+    padding: 1em 2em;
+    position: relative;
+}
+
+
+.gNav_item::before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #808080;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: 0.3s;
+}
+
+.gNav_item:hover::before {
+    width: 100%;
+}
+
+.gNav_link {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 0.2em;
+}
+
+
+
+
+
+/*---------------------------メインビジュアル-------------------------*/
+
+.mainVisual_box{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.mainVisual_img {
+    width: 60%;
+    /* max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto; */
+}
+
+.ttl_name {
+    /* font-size: 40px; */
+    margin-bottom: 1em;
+    color: rgb(72, 70, 70);
+    font-family: Yu Gothic;
+    text-shadow: 5px 8px 4px #2d2d2d; 
+}
+
+.name1 {
+    position: absolute;
+    right: 5.5em;
+    top: 5em;
+    letter-spacing: 0.2em;
+    font-size: 4vmin;
+}
+
+.name2 {
+    position: absolute;
+    right: 4.5em;
+    top: 7em;
+    letter-spacing: 0.2em;
+    font-size: 4vmin;
+}
+
+.name3 {
+    position: absolute;
+    right: 0;
+    top: 9em;
+    letter-spacing: 0.2em;
+    font-size: 4vmin;
+}
+
+
+
+
+
+/*------------------ セクション ---------------------------------------------*/
+/*------------------- セクション共通 ----------------*/
+
+.section {
+    padding-top: 2em;
+    margin-bottom: -2em;
+}
+
+
+.section_ttl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    font-family: Yu Gothic;
+}
+
+.section_ttl::before,
+.section_ttl::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #333;
+    margin: 0 0.5em;
+}
+.sectionText_box {
+    margin-bottom: 2em;
+}
+
+.section_text {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: serif;
+    font-weight: bold;
+    margin: 1em 0;
+    letter-spacing: 0.3em;
+}
+
+
+/*---------------- ワークスセクション -----------------*/
+/*ワークセクション１*/
+
+.section_container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section_box {
+    width: 30%;
+}
+
+.sectionText_box {
+    margin-bottom: 4em;
+}
+
+.section_link1 {
+    display: block;
+    margin-bottom: 1em;
+    transition: 0.6s;
+}
+
+
+
+.section_link1:hover {
+    transform: translateY(-3%);
+    box-shadow: 0 10px 20px #333;
+}
+
+.section_img {
+    width: 100%;
+}
+
+.section_img:hover {
+    opacity: .8;
+}
+
+.works_text {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    text-align: center;
+    font-size: 20px;
+    font-family: Yu Gothic;
+}
+
+
+
+
+    /* ------------アバウトセクション --------------*/
+
+.about_section {
+    margin-bottom: 8em;
+}
+.about_container {
+    display: flex;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* アバウトレフト */
+.about_left {
+    width: 50%;
+    text-align: center;
+    margin-left: 4em;
+}
+
+.about_img{
+    box-shadow: 0 10px 20px #333;
+    object-fit: contain;
+    border-radius: 50%;
+    width: 40%;
+    height: auto; 
+}  
+
+.about_profile {
+    margin: 3em;
+}
+
+.about_date1 {
+    font-weight: bold;
+    font-family: Yu Gothic;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+.about_text1 {
+    font-family: serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.75;
+}
+
+
+
+/* アバウトレフトSNS */
+
+.contact_sns_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact_sns_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.contact_sns_item:hover {
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotateZ(360deg);
+}
+
+.contact_sns_item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact_sns_item i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0 0.5em;
+    padding: 0.4em;
+    font-size: 4rem;
+    border-radius: 100%;
+    background-color: #aaa;
+}
+
+.contact_sns_item-twitter i {
+    color: #fff;
+    background-color: #1da1f3;
+}
+
+.contact_sns_item-instagram i {
+    color: #fff;
+    background: -o-linear-gradient(315deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background-color: unset;
+}
+
+/* アバウトライト */
+
+.about_right {
+    margin-top: 3em;
+}
+
+
+
+.about_list {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.about_date {
+    margin: 1em 0;
+    margin-left: 4em;
+    font-weight: bold;
+    font-family: Yu Gothic;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+}
+.about_text {
+    justify-content: center;
+    margin-left: 14em;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    line-height: 1.75;
+}
+
+
+
+/* ツール*/
+
+.tool_section {
+    margin-bottom: 16em;
+}
+
+.tool_container {
+    display: flex;
+    max-width: 1200px;
+}
+
+.tool_ttl {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+
+.tool_imgBox {
+    width: 50%;
+}
+.tool_textBox {
+    width: 50%;
+    padding-top: 1em;
+}
+.tool_text {
+    font-size: 24px;
+    line-height: 4;
+    letter-spacing: 0.2em;
+}
+
+/* SNS */
+
+.about_sns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sns_box {
+    /* border: 1px solid #333; */
+    padding: 0.4em;
+    box-shadow: 0 10px 20px #333;
+}
+
+.sns_ttl {
+    text-align: center;
+    font-size: 32px;
+    font-family: Yu Gothic;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.twitter-timeline {
+    margin-left: 0.4em;
+}
+
+/* コンタクトセクション */
+.contact_section {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+}
+
+
+.form_container {
+    background-color: #e1e1e1;
+    padding: 40px 80px;
+}
+
+.contact_text {
+    text-align: center;
+}
+
+
+.form_box {
+    margin-bottom: 2em;
+}
+
+.type_name,
+.type_mail {
+    width: 640px;
+    padding: .5em;
+    color: #ccccd6;
+    max-width: 100%;
+}
+
+.type_name,
+.type_mail,
+::placeholder {
+    color: #ccccd6;
+}
+
+.type_gender {
+    margin-left: 30px;
+}
+
+.type_gender:first-of-type {
+    margin-left: 0px;
+}
+
+.type_comment {
+    display: block;
+    width: 100%;
+}
+
+
+.type_submit {
+    display: block;
+    margin: 30px auto 0;
+    padding: .5em 3em;
+    font-size: 14px;
+    background: #29d66c;
+    color: #fff;
+    transition: 0.3s;
+}
+
+input,
+textarea,
+select {
+    margin-top: 0.5em;
+}
+
+/* その他 */
+
+.other_section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.other_container {
+    margin-top: 80px;
+}
+
+.other_list {
+    margin-top: 2em;
+}
+
+.other_ttl {
+    font-size: 24px;
+    font-family: serif;
+    margin-bottom: 0.5em;
+    border-bottom: 1px ;
+}
+
+.otherttl_box {
+    width: 30%;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: #f4f4f4;
+    border-left: solid 6px #5bb7ae;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+.otherttl_box p {
+    margin: 0; 
+    padding: 0;
+}
+
+.other_text {
+    margin-bottom: 1em;
+    line-height: 1.75;
+}
+
+.other_img:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+
+
+
+
+/* ---------------------フッター----------------------- */
+
+.footer {
+    height: 6em;
+    background-color: rgb(164, 192, 179);
+}
+
+.footer_box {
+    position: absolute;
+}
+
+
+/* ページトップボタン */
+
+#page_top{
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 6vw;
+    bottom: 4vw;
+    opacity: 0.7;
+    }
+    #page_top a{
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+    }
+    #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #83c9b3;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    }
+    #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #83c9b3;
+    }
+
+  /* コピーライト */
+
+.footer_copyright {
+    display: block;
+    text-align: center;
+    padding-top: 2em;
+    color: rgb(86, 94, 93);
+    font-weight: bold;
+}
+
+
+
+/* ここから下はレスポンシブ */
+@media (max-width: 559px) {
+
+    .header {
+        padding-top: 1em;
+    }
+
+    .header_box {
+        max-width: 700px;
+        display: flex;        
+        justify-content: center;
+        margin-top: 1em;
+    }
+    .logo {
+        padding-right: 2em;
+    }
+
+    .gNav {
+        position: fixed;
+        transition: 0.3s;
+        right: -100%;
+    }
+
+    .spNav_button {
+        position: fixed;
+        z-index: 3;
+        top: 1em;
+        right: 0.3em;
+        display: block;
+        padding: 0 .2em .1em;
+        font-size: 40px;
+        line-height: 1;
+        cursor: pointer;
+        background: #fff;
+    }
+
+
+
+
+    .gNav.show {
+        right: 0;
+    }
+
+    .gNav_list {
+        flex-direction: column;
+    }
+
+    .gNav_item {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    .gNav_link {
+        padding: 40px 0;
+    }
+
+
+/* メインビジュアル */
+
+.mainVisual_box{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.mainVisual_img {
+    width: 60%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ttl_name {
+    /* font-size: 40px; */
+    margin-bottom: 1em;
+    color: rgb(72, 70, 70);
+    font-family: Yu Gothic;
+    text-shadow: 5px 8px 4px #2d2d2d; 
+}
+
+.name1 {
+    position: absolute;
+    right: 5.5em;
+    top: 5em;
+    letter-spacing: 0.2em;
+    font-size: 4vmin;
+}
+
+.name2 {
+    position: absolute;
+    right: 4.5em;
+    top: 7em;
+    letter-spacing: 0.2em;
+    font-size: 4vmin;
+}
+
+.name3 {
+    position: absolute;
+    right: 0;
+    top: 9em;
+    letter-spacing: 0.2em;
+}
+
+.mainVisual_img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 70% 50% 80%; /* 左上、右上、右下、左下 */
+}
+
+
+
+/*  セクション共通 */
+
+
+.section_ttl {
+    font-size: 24px;
+}
+
+.section_ttl::before,
+.section_ttl::after {
+    width: 20px;
+    height: 3px;
+}
+    
+/* ワークセクション */
+
+.works_text {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    text-align: center;
+    font-size:16px;
+    font-family: serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* これ以前に記述 */
+}
